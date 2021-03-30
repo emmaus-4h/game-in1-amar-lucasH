@@ -14,10 +14,12 @@
 
 
 /* ********************************************* */
-/* globale variabelen die je gebruikt in je game */
+/* 
+lobale variabelen die je gebruikt in je game */
 /* ********************************************* */
 
-const UITLEG = 0;
+const 
+UITLEG = 0;
 const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
@@ -28,11 +30,10 @@ var spelerY = 100; // y-positie van speler
 var kogelX = 0;    // x-positie van kogel
 var kogelY = 0;    // y-positie van kogel
 
-var vijandX = 0;   // x-positie van vijand
-var vijandY = 0;   // y-positie van vijand
+var vijandX = 600;   // x-positie van vijand
+var vijandY = 400;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
-
 
 
 
@@ -46,10 +47,9 @@ var score = 0; // aantal behaalde punten
  * Tekent het speelveld
  */
 var tekenVeld = function () {
-  fill("purple");
-  rect(20, 20, width - 2 * 20, height - 2 * 20);
+    fill("gold");
+    rect(20, 20, width - 2 * 20, height - 2 * 20);
 };
-
 
 /**
  * Tekent de vijand
@@ -57,7 +57,11 @@ var tekenVeld = function () {
  * @param {number} y y-coördinaat
  */
 var tekenVijand = function(x, y) {
-    
+    noStroke();
+    fill("silver");
+    ellipse(x, y, 50, 50);
+
+
 
 };
 
@@ -67,8 +71,8 @@ var tekenVijand = function(x, y) {
  * @param {number} x x-coördinaat
  * @param {number} y y-coördinaat
  */
-var tekenKogel = function(x, y) {
-
+var tekenKogel = function(x, y) { 
+   
 
 };
 
@@ -79,8 +83,10 @@ var tekenKogel = function(x, y) {
  * @param {number} y y-coördinaat
  */
 var tekenSpeler = function(x, y) {
-  fill("white");
-  ellipse(x, y, 50, 50);
+    fill("brown");
+    ellipse(x, y, 50, 50);
+    
+  
 };
 
 
@@ -150,7 +156,7 @@ function setup() {
   createCanvas(1280, 720);
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
-  background('blue');
+  background('black');
 }
 
 
