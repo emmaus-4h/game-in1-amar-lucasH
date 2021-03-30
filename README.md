@@ -9,12 +9,16 @@ Gemaakt door:
 
 Basis: uitleg, spelen, afgaan en punten
 - [x] maak index.html, style.css en script.js met canvas
-- [x] teken speler
+- [ ] de grond tekenen
+- [ ] achtergrond tekenen
+- [ ] obstakels tekenen
+- [ ] tutorial van de bestruring 
+- [ ] welke knop welke actie doet§
+- [ ] teken speler
 - [ ] beweeg speler
-- [ ] ... *(vul zelf aan)*
+- [ ] gameover scherm 
 - [ ] punten op scherm zetten
 - [ ] punten kunnen scoren
-- [ ] uitlegscherm
 
 Uitbreiding: *bedenk iets, bijvoorbeeld meer tegenstanders*
 - [ ] *later uitwerken*
