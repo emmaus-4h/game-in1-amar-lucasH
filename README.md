@@ -1,6 +1,6 @@
 Deze game is gebaseerd op het template voor 4HV van het Emmauscollege Rotterdam
 
-## Mijn spel: *Meneer Pee Game*
+## Mijn spel: *Meneer Pee 2D*
 Gemaakt door:
 - *Amar Crnic*
 - *Lucas de Haas*
