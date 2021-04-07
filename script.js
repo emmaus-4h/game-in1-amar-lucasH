@@ -35,7 +35,8 @@ var vijandY = 400;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
 
-
+var KEY_LEFT = 37;
+var KEY_RIGHT = 39;
 
 
 /* ********************************************* */
@@ -111,7 +112,12 @@ var beweegKogel = function() {
  * Updatet globale variabele spelerX en spelerY
  */
 var beweegSpeler = function() {
-
+ if (keyIsDown(KEY_LEFT)) {
+    spelerX = spelerX - 1;
+  }
+  if (keyIsDown(KEY_RIGHT)) {
+    spelerX = spelerX + 1;
+  }
 };
 
 
