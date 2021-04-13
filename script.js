@@ -91,6 +91,7 @@ var tekenSpeler = function(x, y) {
     fill("brown");
     ellipse(x, y, spelerBreedte, spelerHoogte);
     
+
 };
 
 
@@ -129,6 +130,20 @@ var beweegSpeler = function() {
     spelerY = spelerY + 1;
   }
 
+ if (spelerX < 50) {
+      spelerX = 50;}
+    
+    if (spelerY < 50) {
+      spelerY = 50;
+
+    } 
+    if (spelerX > 1230) {
+      spelerX = 1230;}
+    
+    if (spelerY > 670) {
+      spelerY = 670;
+
+    }
 };
 
 
