@@ -26,6 +26,9 @@ var spelStatus = SPELEN;
 
 var spelerX = 200; // x-positie van speler
 var spelerY = 100; // y-positie van speler
+var spelerBreedte = 50;
+var spelerHoogte = 50;
+
 
 var kogelX = 0;    // x-positie van kogel
 var kogelY = 0;    // y-positie van kogel
@@ -35,8 +38,7 @@ var vijandY = 400;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
 
-var KEY_LEFT = 37;
-var KEY_RIGHT = 39;
+
 
 
 /* ********************************************* */
@@ -50,6 +52,8 @@ var KEY_RIGHT = 39;
 var tekenVeld = function () {
     fill("gold");
     rect(20, 20, width - 2 * 20, height - 2 * 20);
+
+
 };
 
 /**
@@ -85,9 +89,8 @@ var tekenKogel = function(x, y) {
  */
 var tekenSpeler = function(x, y) {
     fill("brown");
-    ellipse(x, y, 50, 50);
+    ellipse(x, y, spelerBreedte, spelerHoogte);
     
-  
 };
 
 
@@ -125,6 +128,7 @@ var beweegSpeler = function() {
   if (keyIsDown(83)) {
     spelerY = spelerY + 1;
   }
+
 };
 
 
@@ -205,4 +209,4 @@ function draw() {
       }
       break;
   }
-}
+};
