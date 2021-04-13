@@ -112,11 +112,18 @@ var beweegKogel = function() {
  * Updatet globale variabele spelerX en spelerY
  */
 var beweegSpeler = function() {
- if (keyIsDown(KEY_LEFT)) {
+ if (keyIsDown(65)) {
     spelerX = spelerX - 1;
   }
-  if (keyIsDown(KEY_RIGHT)) {
+  if (keyIsDown(68)) {
     spelerX = spelerX + 1;
+    }
+    if (keyIsDown(87)) {
+    spelerY = spelerY - 1;
+    }
+  
+  if (keyIsDown(83)) {
+    spelerY = spelerY + 1;
   }
 };
 
