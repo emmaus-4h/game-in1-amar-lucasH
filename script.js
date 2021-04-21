@@ -99,7 +99,34 @@ var tekenSpeler = function(x, y) {
  * Updatet globale variabelen met positie van vijand of tegenspeler
  */
 var beweegVijand = function() {
+     if (keyIsDown(37)) {
+    vijandX = vijandX - 1;
+  }
+  if (keyIsDown(39)) {
+    vijandX = vijandX + 1;
+    }
+    if (keyIsDown(38)) {
+    vijandY = vijandY - 1;
+    }
+  
+  if (keyIsDown(40)) {
+    vijandY = vijandY + 1;
+  }
+
+ if (vijandX < 50) {
+      vijandX = 50;}
     
+    if (vijandY < 50) {
+      vijandY = 50;
+
+    } 
+    if (vijandX > 1230) {
+      vijandX = 1230;}
+    
+    if (vijandY > 670) {
+      vijandY = 670;
+
+    }
 };
 
 
