@@ -50,7 +50,7 @@ var score = 0; // aantal behaalde punten
  * Tekent het speelveld
  */
 var tekenVeld = function () {
-    fill("gold");
+    fill("green");
     rect(20, 20, width - 2 * 20, height - 2 * 20);
 
 
@@ -63,7 +63,7 @@ var tekenVeld = function () {
  */
 var tekenVijand = function(x, y) {
     noStroke();
-    fill("silver");
+    fill("blue");
     ellipse(x, y, 50, 50);
 
 
@@ -88,7 +88,7 @@ var tekenKogel = function(x, y) {
  * @param {number} y y-coördinaat
  */
 var tekenSpeler = function(x, y) {
-    fill("brown");
+    fill("red");
     ellipse(x, y, spelerBreedte, spelerHoogte);
     
 
