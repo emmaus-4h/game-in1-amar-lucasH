@@ -24,8 +24,8 @@ const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
 
-var spelerX = 200; // x-positie van speler
-var spelerY = 100; // y-positie van speler
+var spelerX = 30; // x-positie van speler
+var spelerY = 350; // y-positie van speler
 var spelerBreedte = 50;
 var spelerHoogte = 50;
 
@@ -33,8 +33,8 @@ var spelerHoogte = 50;
 var kogelX = 0;    // x-positie van kogel
 var kogelY = 0;    // y-positie van kogel
 
-var vijandX = 600;   // x-positie van vijand
-var vijandY = 400;   // y-positie van vijand
+var vijandX = 1200;   // x-positie van vijand
+var vijandY = 350;   // y-positie van vijand
 
 var score = 0; // aantal behaalde punten
 
@@ -50,7 +50,7 @@ var score = 0; // aantal behaalde punten
  * Tekent het speelveld
  */
 var tekenVeld = function () {
-    fill("green");
+    fill("black");
     rect(20, 20, width - 2 * 20, height - 2 * 20);
 
 
@@ -63,8 +63,8 @@ var tekenVeld = function () {
  */
 var tekenVijand = function(x, y) {
     noStroke();
-    fill("blue");
-    ellipse(x, y, 50, 50);
+    fill("white");
+    rect(x, y, 50, 50);
 
 
 
@@ -88,8 +88,8 @@ var tekenKogel = function(x, y) {
  * @param {number} y y-coördinaat
  */
 var tekenSpeler = function(x, y) {
-    fill("red");
-    ellipse(x, y, spelerBreedte, spelerHoogte);
+    fill("white");
+    rect(x, y, spelerBreedte, spelerHoogte);
     
 
 };
@@ -99,18 +99,12 @@ var tekenSpeler = function(x, y) {
  * Updatet globale variabelen met positie van vijand of tegenspeler
  */
 var beweegVijand = function() {
-     if (keyIsDown(37)) {
-    vijandX = vijandX - 1;
-  }
-  if (keyIsDown(39)) {
-    vijandX = vijandX + 1;
-    }
     if (keyIsDown(38)) {
-    vijandY = vijandY - 1;
+    vijandY = vijandY - 3;
     }
   
   if (keyIsDown(40)) {
-    vijandY = vijandY + 1;
+    vijandY = vijandY + 3;
   }
 
  if (vijandX < 50) {
@@ -143,18 +137,12 @@ var beweegKogel = function() {
  * Updatet globale variabele spelerX en spelerY
  */
 var beweegSpeler = function() {
- if (keyIsDown(65)) {
-    spelerX = spelerX - 1;
-  }
-  if (keyIsDown(68)) {
-    spelerX = spelerX + 1;
-    }
     if (keyIsDown(87)) {
-    spelerY = spelerY - 1;
+    spelerY = spelerY - 3;
     }
   
   if (keyIsDown(83)) {
-    spelerY = spelerY + 1;
+    spelerY = spelerY + 3;
   }
 
  if (spelerX < 50) {
