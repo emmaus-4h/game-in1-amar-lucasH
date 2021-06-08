@@ -117,18 +117,20 @@ vijandX = vijandX + 2;
     vijandY = vijandY + 3;
   }
 
- if (vijandX < 50) {
-      vijandX = 50;}
+ if (vijandX < 670) {
+      vijandX = 670;
+      }
     
-    if (vijandY < 50) {
-      vijandY = 50;
+    if (vijandY < 20) {
+      vijandY = 20;
 
     } 
-    if (vijandX > 1230) {
-      vijandX = 1230;}
+    if (vijandX > 1180) {
+      vijandX = 1180;
+      }
     
-    if (vijandY > 670) {
-      vijandY = 670;
+    if (vijandY > 600) {
+      vijandY = 600;
 
     }
 };
@@ -164,17 +166,19 @@ spelerX = spelerX + 2;
   }
 
  if (spelerX < 50) {
-      spelerX = 50;}
+      spelerX = 50;
+      }
     
-    if (spelerY < 50) {
-      spelerY = 50;
+    if (spelerY < 20) {
+      spelerY = 20;
 
     } 
-    if (spelerX > 1230) {
-      spelerX = 1230;}
+    if (spelerX > 580) {
+      spelerX = 580;
+      }
     
-    if (spelerY > 670) {
-      spelerY = 670;
+    if (spelerY > 600) {
+      spelerY = 600;
 
 
     }
