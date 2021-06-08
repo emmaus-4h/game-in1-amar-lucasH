@@ -27,7 +27,7 @@ var spelStatus = SPELEN;
 var spelerX = 30; // x-positie van speler
 var spelerY = 350; // y-positie van speler
 var spelerBreedte = 50;
-var spelerHoogte = 50;
+var spelerHoogte = 100;
 
 
 var kogelX = 0;    // x-positie van kogel
@@ -35,6 +35,9 @@ var kogelY = 0;    // y-positie van kogel
 
 var vijandX = 1200;   // x-positie van vijand
 var vijandY = 350;   // y-positie van vijand
+var vijandBreedte = 50;
+var vijandHoogte = 100;
+
 
 var score = 0; // aantal behaalde punten
 
@@ -64,7 +67,7 @@ var tekenVeld = function () {
 var tekenVijand = function(x, y) {
     noStroke();
     fill("white");
-    rect(x, y, 50, 50);
+    rect(x, y, vijandBreedte, vijandHoogte);
 
 
 
