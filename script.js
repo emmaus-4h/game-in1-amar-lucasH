@@ -24,19 +24,19 @@ const SPELEN = 1;
 const GAMEOVER = 2;
 var spelStatus = SPELEN;
 
-var spelerX = 30; // x-positie van speler
-var spelerY = 350; // y-positie van speler
+var spelerX = 0; // x-positie van speler
+var spelerY = 640; // y-positie van speler
 var spelerBreedte = 50;
-var spelerHoogte = 100;
+var spelerHoogte = 200;
 
 
-var kogelX = 0;    // x-positie van kogel
-var kogelY = 0;    // y-positie van kogel
+var balX = 815;    // x-positie van bal
+var balY = 700;    // y-positie van bal
 
-var vijandX = 1200;   // x-positie van vijand
-var vijandY = 350;   // y-positie van vijand
+var vijandX = 1980;   // x-positie van vijand
+var vijandY = 640;   // y-positie van vijand
 var vijandBreedte = 50;
-var vijandHoogte = 100;
+var vijandHoogte = 200;
 
 
 var score = 0; // aantal behaalde punten
@@ -79,9 +79,9 @@ var tekenVijand = function(x, y) {
  * @param {number} x x-coördinaat
  * @param {number} y y-coördinaat
  */
-var tekenKogel = function(x, y) { 
-   
-
+var tekenBal = function(x, y) { 
+   fill("white");
+   circle(x, y , 50);
 };
 
 
@@ -103,34 +103,34 @@ var tekenSpeler = function(x, y) {
  */
 var beweegVijand = function() {
     if (keyIsDown(37)) {
-vijandX = vijandX - 2;
+vijandX = vijandX - 3;
     }
   if (keyIsDown(39)) {
-vijandX = vijandX + 2;
+vijandX = vijandX + 3;
     }
 
     if (keyIsDown(38)) {
-    vijandY = vijandY - 3;
+    vijandY = vijandY - 5;
     }
   
   if (keyIsDown(40)) {
-    vijandY = vijandY + 3;
+    vijandY = vijandY + 5;
   }
 
- if (vijandX < 670) {
-      vijandX = 670;
+ if (vijandX < 795) {
+      vijandX = 795;
       }
     
     if (vijandY < 20) {
       vijandY = 20;
 
     } 
-    if (vijandX > 1180) {
-      vijandX = 1180;
+    if (vijandX > 1500) {
+      vijandX = 1500;
       }
     
-    if (vijandY > 600) {
-      vijandY = 600;
+    if (vijandY > 1060) {
+      vijandY = 1060;
 
     }
 };
@@ -139,7 +139,9 @@ vijandX = vijandX + 2;
 /**
  * Updatet globale variabelen met positie van kogel of bal
  */
-var beweegKogel = function() {
+var beweegBal = function() {
+ balX = balX + 4;
+
 
 };
 
@@ -150,19 +152,19 @@ var beweegKogel = function() {
  */
 var beweegSpeler = function() {
       if (keyIsDown(65)) {
-spelerX = spelerX - 2;
+spelerX = spelerX - 3;
     }
 
   if (keyIsDown(68)) {
-spelerX = spelerX + 2;
+spelerX = spelerX + 3;
     }
 
     if (keyIsDown(87)) {
-    spelerY = spelerY - 3;
+    spelerY = spelerY - 5;
     }
   
   if (keyIsDown(83)) {
-    spelerY = spelerY + 3;
+    spelerY = spelerY + 5;
   }
 
  if (spelerX < 50) {
@@ -173,12 +175,12 @@ spelerX = spelerX + 2;
       spelerY = 20;
 
     } 
-    if (spelerX > 580) {
-      spelerX = 580;
+    if (spelerX > 705) {
+      spelerX = 705;
       }
     
-    if (spelerY > 600) {
-      spelerY = 600;
+    if (spelerY > 1060) {
+      spelerY = 1060;
 
 
     }
@@ -223,7 +225,7 @@ var checkGameOver = function() {
  */
 function setup() {
   // Maak een canvas (rechthoek) waarin je je speelveld kunt tekenen
-  createCanvas(1280, 720);
+  createCanvas(1580, 1280);
 
   // Kleur de achtergrond blauw, zodat je het kunt zien
   background('black');
@@ -239,7 +241,7 @@ function draw() {
   switch (spelStatus) {
     case SPELEN:
       beweegVijand();
-      beweegKogel();
+      beweegBal();
       beweegSpeler();
       
       if (checkVijandGeraakt()) {
@@ -254,7 +256,7 @@ function draw() {
 
       tekenVeld();
       tekenVijand(vijandX, vijandY);
-      tekenKogel(kogelX, kogelY);
+      tekenBal(balX, balY);
       tekenSpeler(spelerX, spelerY);
 
       if (checkGameOver()) {
